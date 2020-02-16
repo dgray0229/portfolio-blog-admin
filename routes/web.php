@@ -18,7 +18,14 @@ Route::get('/', 'PostController@all');
 Route::get('/admin/{any}', 'AdminController@index')->where('any', '.*');
 Route::get('/{post}/comments', 'CommentController@index');
 Route::post('/{post}/comments', 'CommentController@store');
-
+/**
+ * Additional Routes for LinkedIn functionality
+ */
+Route::get('linkedin', function () {
+    return view('loginlinkedin');
+});
+Route::get('/redirect', 'SocialAuthLinkedinController@redirect');
+Route::get('/callback', 'SocialAuthLinkedinController@callback');
 /**
  * We wrote /admin/{any} here because we intend to serve every page of the admin dashboard using the Vue router. 
  * When we stert building the admin dashboard in the next article, we will let Vue handle all the routes of the /admin pages.

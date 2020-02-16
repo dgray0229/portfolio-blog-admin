@@ -133,7 +133,7 @@ class PostController extends Controller
     public function all()
     {
         return view('landing', [
-            'posts' => Post::latest()->paginate(5)
+            'posts' => Post::latest()->paginate(5), 
         ]);
     }
 
