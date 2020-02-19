@@ -52,7 +52,7 @@
                         </div>
 
                         <div class="form-group row mb-0">
-                            <div class="col-md-8 offset-md-4">
+                            <div class="col-md-6 offset-md-4">
                                 <button type="submit" class="btn btn-primary">
                                     {{ __('Login') }}
                                 </button>
@@ -63,6 +63,11 @@
                                     </a>
                                 @endif
                             </div>
+                            <div class="col-md-4 offset-md-4 mt-3 mx-auto text-center">
+                                <div class="title-text">{{ __('Login With Social Media') }}</div>
+                                <a href="{{ url('/redirect') }}" class="btn btn-primary">{{ __('Login With Linkedin') }}</a>
+                            </div>
+
                         </div>
                     </form>
                 </div>

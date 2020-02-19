@@ -30,5 +30,12 @@ class AppServiceProvider extends ServiceProvider
         * 'collation' => 'utf8mb4_unicode_ci',
         */
         \Illuminate\Support\Facades\Schema::defaultStringLength(191);
+
+        \Blade::if('admin', function () {            
+            if (auth()->user() && auth()->user()->admin) {
+                return 1;
+            }
+            return 0;
+        });
     }
 }

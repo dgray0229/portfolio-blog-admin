@@ -176,6 +176,10 @@ return [
         App\Providers\EventServiceProvider::class,
         App\Providers\RouteServiceProvider::class,
 
+        /**
+         * Custom Blade Service Provider
+         */
+        App\Providers\BladeServiceProvider::class,
     ],
 
     /*
