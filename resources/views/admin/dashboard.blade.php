@@ -28,6 +28,7 @@
       <Homepage 
         :user-name='@json(auth()->user()->name)' 
         :user-id='@json(auth()->user()->id)'
+        :user-token='@json(auth()->user()->linkedin_access_token)'
       ></Homepage>
       <!-- We earlier defined the Homepage component as the wrapping component, that’s why we pulled it in here as the root component. 
       For some of the frontend components to work correctly, we require some details of the logged in admin user to perform CRUD operations. 

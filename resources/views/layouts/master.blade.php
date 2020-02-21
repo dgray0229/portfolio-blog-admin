@@ -8,7 +8,7 @@
         <meta name="author" content="Neo Ighodaro">
         <meta name="csrf-token" content="{{ csrf_token() }}">
         <script src="{{ asset('js/app.js') }}" defer></script>
-        <title>LaravelCMS</title>
+        <title>Devin Gray CMS</title>
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
         <style> 
         body {
@@ -24,7 +24,7 @@
       <body>
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
           <div class="container">
-            <a class="navbar-brand" href="/">LaravelCMS</a>
+            <a class="navbar-brand" href="/">Devin Gray CMS</a>
             <div class="collapse navbar-collapse" id="navbarResponsive">
               <ul class="navbar-nav ml-auto">
                  @if (Route::has('login'))

@@ -4,7 +4,7 @@
       <div>
         <nav>
           <section>
-            <a style="color: white" href="/admin/dashboard">Laravel-CMS</a> &nbsp; ||  &nbsp;
+            <a style="color: white" href="/admin/dashboard">Devin Gray CMS</a> &nbsp; ||  &nbsp;
             <a style="color: white" href="/">HOME</a>
             <hr>
             <ul>
@@ -20,13 +20,13 @@
           <header>
             <header class="d-inline">Welcome, {{ userName }}</header>
             <p @click="logout" class="float-right mr-3" style="cursor: pointer">Logout</p>
+            <p @click="logData(userToken)" class="float-right mr-3" style="cursor: pointer">Test Data</p>
           </header>
           <div> 
             <router-view></router-view> 
           </div>
         </article>
       </div>
-      
     </template>
     <style scoped>
       @import url(https://fonts.googleapis.com/css?family=Dosis:300|Lato:300,400,600,700|Roboto+Condensed:300,700|Open+Sans+Condensed:300,600|Open+Sans:400,300,600,700|Maven+Pro:400,700);
@@ -93,6 +93,9 @@
         userName: {
           type: String,
           required: true
+        },
+        userToken: {
+          type: Object,
         }
       },
       data() {
@@ -103,6 +106,9 @@
           axios.post("/logout").then(() => {
             window.location = "/";
           });
+        },
+        logData(data) {
+          console.log(data);
         }
       }
     };
