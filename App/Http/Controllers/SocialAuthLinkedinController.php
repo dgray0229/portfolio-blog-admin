@@ -33,6 +33,7 @@ class SocialAuthLinkedinController extends Controller
                 $admin->name = $linkdinUser->name;
                 $admin->email = $linkdinUser->email;
                 $admin->linkedin_id = $linkdinUser->id;
+                $admin->linkedin_access_token = $linkdinUser->token;
                 $admin->password = md5(rand(1,10000));
                 $admin->save();
                 Auth::loginUsingId($admin->id);

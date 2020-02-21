@@ -30,7 +30,11 @@
                  @if (Route::has('login'))
                     @auth
                     <li class="nav-item">
-                         <a class="nav-link" href="{{ url('/home') }}">Home</a>
+                    @admin
+                      <a class="nav-link" href="{{ url('/admin/dashboard') }}">Dashboard</a>
+                    @else
+                      <a class="nav-link" href="{{ url('/home') }}">Home</a>
+                    @endadmin
                     </li>
                     <li class="nav-item">
                       <a class="nav-link" href="{{ route('logout') }}"
@@ -62,7 +66,7 @@
 
         <footer class="py-5 bg-dark">
           <div class="container">
-            <p class="m-0 text-center text-white">Copyright &copy; LaravelCMS 2018</p>
+            <p class="m-0 text-center text-white">&copy;Copyright <?php echo date('Y') ?> |  Devin Gray</p>
           </div>
         </footer>
       </body>

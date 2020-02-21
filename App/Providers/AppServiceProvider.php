@@ -32,7 +32,7 @@ class AppServiceProvider extends ServiceProvider
         \Illuminate\Support\Facades\Schema::defaultStringLength(191);
 
         \Blade::if('admin', function () {            
-            if (auth()->user() && auth()->user()->admin) {
+            if (auth()->user() && auth()->user()->hasRole('admin')) {
                 return 1;
             }
             return 0;
