@@ -26,6 +26,13 @@ Route::get('linkedin', function () {
 });
 Route::get('/redirect', 'SocialAuthLinkedinController@redirect');
 Route::get('/callback', 'SocialAuthLinkedinController@callback');
+
+/**
+ * Consume External APIs using a custom controller
+ */
+Route::get('json-api', 'ApiController@index');
+Route::get('linkedin-test', 'LinkedInController@getAuthUrl');
+
 /**
  * We wrote /admin/{any} here because we intend to serve every page of the admin dashboard using the Vue router. 
  * When we stert building the admin dashboard in the next article, we will let Vue handle all the routes of the /admin pages.
